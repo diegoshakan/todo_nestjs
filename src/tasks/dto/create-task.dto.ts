@@ -2,18 +2,18 @@ import { IsBoolean, IsNotEmpty, IsString, MaxLength, MinLength } from "class-val
 
 export class CreateTaskDto {
     @IsString()
-    // @IsNotEmpty()
-    // @MinLength(5)
-    // @MaxLength(20)
+    @IsNotEmpty()
+    @MinLength(5)
+    @MaxLength(20)
     title: string;
 
     @IsString()
-    // @IsNotEmpty()
-    // @MinLength(5)
-    // @MaxLength(200)
+    @IsNotEmpty()
+    @MinLength(5)
+    @MaxLength(200)
     description: string;
 
     @IsBoolean()
-    // @IsNotEmpty()
+    @IsNotEmpty()
     done: boolean;
 }
