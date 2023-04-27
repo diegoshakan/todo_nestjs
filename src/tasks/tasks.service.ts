@@ -22,7 +22,11 @@ export class TasksService {
   }
 
   async findOne(id: number) {
-    const task = await this.taskRepository.findOne({ where: { id }});
+    const task = await this.taskRepository.findOne({ where: { id },
+      relations: {
+      user: true
+      }
+    });
 
     if (!task) {
       throw new NotFoundException(`Task id ${id} not found`)
