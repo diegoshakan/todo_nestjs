@@ -8,15 +8,15 @@ import { UserModule } from './user/user.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-    type: "postgres",
-    host: "localhost",
-    port: 5432,
-    username: "postgres",
-    password: "shakandb",
-    database: "postgres",
-    autoLoadEntities: true,
-    synchronize: true
-  }),
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'postgres',
+      database: 'todo',
+      autoLoadEntities: true,
+      synchronize: true,
+    }),
     TasksModule,
     UserModule,
   ],
